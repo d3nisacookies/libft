@@ -1,0 +1,4 @@
+# compiled sourcd #
+*.o
+*.exe
+*.out
