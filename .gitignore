@@ -2,3 +2,6 @@
 *.o
 *.exe
 *.out
+
+#commit shell
+git_commit.sh
