@@ -30,5 +30,6 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int ft_atoi(const char *str);
 void *ft_calloc(size_t num, size_t size);
 char *ft_strdup(const char *s1);
+char *ft_strjoin(const char *s1, const char *s2);
 
 #endif
