@@ -11,4 +11,4 @@ git add .
 git commit -m "$commit_message"
 
 # Push the changes to the remote repository (assuming 'origin' and 'main' or 'master')
-git push remi-branch
+git push
