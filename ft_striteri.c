@@ -10,6 +10,5 @@ char *ft_striteri(char *s, char (*f)(unsigned int, char))
         (*f)(i, s[i]);
         i++;
     }
-    s[i] = '\0';
-    return s;
+
 }
