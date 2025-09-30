@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 # Source files
-SRCS = ft_strjoin.c test.c ft_strlen.c
+SRCS = ft_putchar_fd.c ft_putnbr_fd.c
 
 # Output executable
 NAME = a.out
