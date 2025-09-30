@@ -7,9 +7,9 @@ int ft_toupper(int c)
     return (c);
 }
 
-#include <stdio.h>
-int main(void)
-{
-    printf("toupper z: %c\n ", ft_toupper('z'));
-    return 0;    
-}
+// #include <stdio.h>
+// int main(void)
+// {
+//     printf("toupper z: %c\n ", ft_toupper('z'));
+//     return 0;    
+// }

@@ -19,17 +19,17 @@ void ft_putnbr_fd(int c, int fd)
     ft_putchar_fd((c % 10) + '0', fd);
 }
 
-int main(void)
-{
-    ft_putnbr_fd(1,1);
-    write(1, "\n", 1);
+// int main(void)
+// {
+//     ft_putnbr_fd(1,1);
+//     write(1, "\n", 1);
 
-    ft_putnbr_fd(-1,1);
-    write(1, "\n", 1);
+//     ft_putnbr_fd(-1,1);
+//     write(1, "\n", 1);
 
-    ft_putnbr_fd(1231223,1);
-    write(1, "\n", 1);
+//     ft_putnbr_fd(1231223,1);
+//     write(1, "\n", 1);
 
-    ft_putnbr_fd(-2147483648,1);
-    write(1, "\n", 1);
-}
+//     ft_putnbr_fd(-2147483648,1);
+//     write(1, "\n", 1);
+// }

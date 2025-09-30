@@ -29,19 +29,19 @@ void *ft_memmove(void *dest, const void *src, size_t len)
     return (dest);
 }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int main(void)
-{
-    char str1[] = "Hello World!";
-    char str2[] = "Hello World!";
+// int main(void)
+// {
+//     char str1[] = "Hello World!";
+//     char str2[] = "Hello World!";
 
-    ft_memmove(str1 + 7, str1, 5);
-    memmove(str2 + 7, str2, 5);
+//     ft_memmove(str1 + 7, str1, 5);
+//     memmove(str2 + 7, str2, 5);
 
-    printf("ft_memmove : %s\n", str1);
-    printf("memmove : %s\n", str2);
+//     printf("ft_memmove : %s\n", str1);
+//     printf("memmove : %s\n", str2);
 
-    return 0;
-}
+//     return 0;
+// }

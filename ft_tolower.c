@@ -9,8 +9,8 @@ int ft_tolower(int c)
     return (c);
 }
 
-#include <stdio.h>
-int main(){
-    printf("tolower Z :  %c\n", ft_tolower('Z'));
-    return 0;
-}
+// #include <stdio.h>
+// int main(){
+//     printf("tolower Z :  %c\n", ft_tolower('Z'));
+//     return 0;
+// }

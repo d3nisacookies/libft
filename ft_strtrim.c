@@ -1,6 +1,7 @@
 #include "libft.h"
 
-static int to_trim(char *set, char c)
+// Change parameter to const char*
+static int to_trim(const char *set, char c)
 {
     size_t i;
     i = 0;
@@ -14,7 +15,8 @@ static int to_trim(char *set, char c)
     return 0;
 }
 
-static const char *new_str(const char *s1, size_t start, size_t len)
+// Change return type to char* (not const char*)
+static char *new_str(const char *s1, size_t start, size_t len)
 {
     char *str;
     size_t i;
@@ -41,17 +43,29 @@ char *ft_strtrim(const char *s1, const char *set)
 {
     size_t i;
     size_t j;
+    size_t s1_len;
 
-    i = 0;
-    j = ft_strlen(s1) - 1;
-
-    if (ft_strlen(s1) == 0)
+    if (!s1 || !set)
+        return (NULL);
+        
+    s1_len = ft_strlen(s1);
+    if (s1_len == 0)
     {
         return (ft_strdup(""));
     }
-    while (to_trim(set, s1[i]))
+    
+    i = 0;
+    j = s1_len - 1;
+
+    while (to_trim((const char *)set, s1[i]))  // Cast to fix const issue
         i++;
-    while (to_trim(set, s1[j]))
+        
+    // Check if entire string was trimmed
+    if (i > j)
+        return (ft_strdup(""));
+        
+    while (to_trim((const char *)set, s1[j]))  // Cast to fix const issue
         j--;
-    return(new_str(s1, i, j - (i - 1)));
+        
+    return(new_str(s1, i, (j - i) + 1));  // Fixed the length calculation
 }

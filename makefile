@@ -1,29 +1,31 @@
-# Compiler
+# Compiler and flags
 CC = gcc
-
-# Compiler flags
 CFLAGS = -Wall -Wextra -Werror
 
-# Source files
-SRCS = ft_putchar_fd.c ft_putnbr_fd.c
+# Library name
+NAME = libft.a
 
-# Output executable
-NAME = a.out
+# Source files (all .c files in current directory)
+SRCS = $(wildcard *.c)
 
-# Default target
+# Object files
+OBJS = $(SRCS:.c=.o)
+
+# Rules
 all: $(NAME)
 
-# Build executable
-$(NAME): $(SRCS)
-	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-# Clean object files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	rm -f *.o *.exe
+	rm -f $(OBJS)
 
-# Remove executable
 fclean: clean
 	rm -f $(NAME)
 
-# Rebuild everything
 re: fclean all
+
+.PHONY: all clean fclean re
